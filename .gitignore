@@ -201,6 +201,7 @@ GitHub.sublime-settings
 *.csv
 *.json
 *.session
+*.session-journal
 
 # Exceptions
 !requirements.txt
