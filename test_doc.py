@@ -1,3 +1,4 @@
+import os
 from telethon import TelegramClient
 import time
 from environs import Env
@@ -18,14 +19,15 @@ client = TelegramClient('send_msg', api_id, api_hash)
 
 ids =[676464356,1469940265,663339140,607827978,603546190]
 # ids = [410625567]
-user_names = ['botriver_bot',
-'gokul_ravi',
-'Shazam199991',
-'prodigalS0N',
-]
+user_names = ['gokul_ravi',
+			'Shazam199991',
+			'prodigalS0N',
+			]
 
+file_location = (os.getcwd()) + '/sample.pdf'
 async def send_message():
-    await client.send_message(id, 'Test msg 006')
+    await client.send_message(id, 'Test msg')
+    await client.send_file(id, file_location)
     time.sleep(sleepTime)
 
 # entity = []
@@ -51,5 +53,3 @@ with client:
 
 # print(entity)
 print('Done !')
-
-    
